@@ -1,5 +1,12 @@
+import Pages from "./Pages";
+import "./App.scss";
+
 function App() {
-  return <div>React App</div>;
+  return (
+    <div>
+      <Pages />
+    </div>
+  );
 }
 
 export default App;

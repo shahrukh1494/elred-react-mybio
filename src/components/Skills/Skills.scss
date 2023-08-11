@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.skillscontainer {
+  padding-top: 23px;
+  padding-left: 20px;
+
+  .skillsheader {
+    font-family: Avenir Next LT Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+
+  .skillstext {
+    font-family: Avenir Next LT Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .pillscontainer {
+    margin: 20px 0 24px 0;
+
+    .pill {
+      padding: 5px 10px 5px 10px;
+      background-color: #456eff;
+      font-family: Avenir Next LT Pro;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      text-align: center;
+      color: white;
+      border-radius: 14px;
+    }
+  }
+}
