@@ -13,7 +13,7 @@ const AboutMe = () => {
     method: "POST",
   });
   if (loading) return <SectionLoader />;
-  if (error) return <FetchError />;
+  if (error) return <FetchError header="About me" />;
 
   const { aboutUser, bloodGroup } = data.result[0];
   let bloodGroupValue = "- ";

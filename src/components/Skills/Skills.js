@@ -11,7 +11,7 @@ const Skills = () => {
     method: "POST",
   });
   if (loading) return <SectionLoader />;
-  if (error) return <FetchError />;
+  if (error) return <FetchError header="Skills" />;
 
   const { skills, hobbies, subjects } = data.result[0];
 

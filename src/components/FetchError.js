@@ -1,8 +1,12 @@
-import React from "react";
+import "./FetchError.scss";
 
-const FetchError = () => {
+const FetchError = ({ header = "" }) => {
   return (
-    <div className="text-danger text-center py-5">Something went wrong!</div>
+    <>
+      {header && <div className="aboutmeheader fetcherrorheader">{header}</div>}
+      <div className="text-danger text-center pb-5">Something went wrong!</div>
+      <div className="fetcherrorborderbottom"></div>
+    </>
   );
 };
 
