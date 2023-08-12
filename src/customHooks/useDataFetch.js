@@ -19,7 +19,7 @@ const useDataFetch = (url, options = {}) => {
     };
 
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line
 
   return [data, loading, error];
 };

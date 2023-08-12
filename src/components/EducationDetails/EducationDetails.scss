@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.educationheader {
+  padding: 0 0 24px 19px;
+  font-family: Avenir Next LT Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.edcationdetailscontainer:last-child {
+  padding-bottom: 24px;
+}
+
+.edcationdetailscontainer:not(:last-child) {
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid #0000004d;
+}
+
+.noeducation {
+  border-bottom: 0.5px solid #0000004d;
+}
+
+.educationboxcontainer {
+  padding: 0 20px;
+  border-bottom: 0.5px solid #0000004d;
+
+  .edcationdetailscontainer {
+    padding-top: 20px;
+
+    .edutitle {
+      font-family: Avenir Next LT Pro;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      margin-bottom: 6px;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+
+      .areaofstudy {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .shieldicon {
+        height: 20px;
+        width: 20px;
+        margin-left: 6px;
+      }
+    }
+
+    .institution {
+      font-family: Avenir Next LT Pro;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      color: #1c090999;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      display: flex;
+
+      .institutename {
+        margin-right: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 24ch;
+      }
+
+      .bluetickicon {
+        height: 14px;
+        width: 14px;
+        margin-right: 4px;
+      }
+
+      .city {
+        margin-left: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 24ch;
+      }
+    }
+
+    .year {
+      font-family: Avenir Next LT Pro;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      color: #1c0909;
+    }
+  }
+}
