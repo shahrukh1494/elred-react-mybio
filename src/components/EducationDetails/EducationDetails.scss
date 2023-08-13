@@ -14,6 +14,16 @@
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
+.companyheader {
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-bottom: 2px;
+  font-family: Avenir Next LT Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
 .edcationdetailscontainer:last-child {
   padding-bottom: 24px;
 }
@@ -23,16 +33,20 @@
   border-bottom: 0.5px solid #0000004d;
 }
 
-.noeducation {
-  border-bottom: 0.5px solid #0000004d;
+.companyboxcontainer:last-child {
+  padding-bottom: 35px;
 }
 
 .educationboxcontainer {
-  padding: 0 20px;
   border-bottom: 0.5px solid #0000004d;
+}
+
+.educationboxcontainer,
+.companyboxcontainer {
+  padding: 0 20px;
 
   .edcationdetailscontainer {
-    padding-top: 20px;
+    padding-top: 26px;
 
     .edutitle {
       font-family: Avenir Next LT Pro;
