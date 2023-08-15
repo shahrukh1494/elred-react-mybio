@@ -5,15 +5,16 @@ import useDataFetch from "../../customHooks/useDataFetch";
 import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import { useNavigate } from "react-router-dom";
+import userContext from "../UserContext";
+import { useContext } from "react";
 
 const API_ENDPOINT = "noSessionViewMyBio?userCode=";
-const USER_CODE = "63aad78bb38aa1d755b49561";
-// const USER_CODE = "63a5932c6af986350ae42328";
 
 const AboutMe = () => {
+  const { userCode } = useContext(userContext);
   const navigate = useNavigate();
 
-  const [data, loading, error] = useDataFetch(API_ENDPOINT + USER_CODE, {
+  const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });
   if (loading) return <SectionLoader />;

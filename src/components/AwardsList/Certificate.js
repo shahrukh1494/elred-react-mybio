@@ -8,7 +8,7 @@ const Certificate = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { data, extension } = location.state;
-  console.log(data);
+
   const driveUrl = `https://drive.google.com/viewerng/viewer?embedded=true&url=${
     data.pdfPreview || data.awardCertificateURL
   }#tollbar=0&scrollbar=0`;

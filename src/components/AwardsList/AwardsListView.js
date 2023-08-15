@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const AwardsListView = ({ data }) => {
   const navigate = useNavigate();
+
   return (
     <div className="listcontainer">
       {data?.map((listItem) => (

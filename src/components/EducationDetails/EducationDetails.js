@@ -1,14 +1,16 @@
+import { useContext } from "react";
 import useDataFetch from "../../customHooks/useDataFetch";
 import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import DetailsList from "./DetailsList";
 import "./EducationDetails.scss";
+import userContext from "../UserContext";
 
 const API_ENDPOINT = "noSessionViewMyBioEducationDetails?userCode=";
-const USER_CODE = "63aad78bb38aa1d755b49561";
 
 const EducationDetails = () => {
-  const [data, loading, error] = useDataFetch(API_ENDPOINT + USER_CODE, {
+  const { userCode } = useContext(userContext);
+  const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });
   if (loading) return <SectionLoader />;

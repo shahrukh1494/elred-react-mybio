@@ -2,12 +2,15 @@ import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import useDataFetch from "../../customHooks/useDataFetch";
 import SkillsContainer from "./SkillsContainer";
+import { useContext } from "react";
+import userContext from "../UserContext";
+
+const API_ENDPOINT = "noSessionViewMyBioSkills?userCode=";
 
 const Skills = () => {
-  const API_ENDPOINT = "noSessionViewMyBioSkills?userCode=";
-  const USER_CODE = "63aad78bb38aa1d755b49561";
+  const { userCode } = useContext(userContext);
 
-  const [data, loading, error] = useDataFetch(API_ENDPOINT + USER_CODE, {
+  const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });
   if (loading) return <SectionLoader />;
