@@ -9,7 +9,6 @@ const API_ENDPOINT = "noSessionViewMyBioSkills?userCode=";
 
 const Skills = () => {
   const { userCode } = useContext(userContext);
-
   const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });
@@ -17,7 +16,6 @@ const Skills = () => {
   if (error) return <FetchError header="Skills" />;
 
   const { skills, hobbies, subjects } = data.result[0];
-
   const skillsSubheader =
     "I am incredible at these skills /professionally great at";
   const noSkills = "No skills added yet";

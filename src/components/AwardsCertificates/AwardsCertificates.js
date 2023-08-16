@@ -5,24 +5,25 @@ import SectionLoader from "../SectionLoader";
 import "./AwardsCertificates.scss";
 import { useNavigate } from "react-router-dom";
 import userContext from "../UserContext";
+import AwardIcons from "./AwardIcons";
 
 const API_ENDPOINT = "noSessionPreviewAwards?userCode=";
 
 const AwardsCertificates = () => {
   const { userCode } = useContext(userContext);
   const navigate = useNavigate();
-
   const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });
   if (loading) return <SectionLoader />;
   if (error) return <FetchError header="My awards & certificates" />;
 
-  const { result } = data;
-
+  let { result, totalAwardsCount } = data;
   const navigateToAwards = () => {
+    result = result.slice(0, 10);
+
     navigate("/my-awards-and-certificates", {
-      state: result.slice(0, 11),
+      state: { result, totalAwardsCount },
     });
   };
 
@@ -37,24 +38,7 @@ const AwardsCertificates = () => {
             </div>
           )}
         </div>
-        <div
-          className={`${
-            result?.length !== 0
-              ? "awardiconscontainer"
-              : "text-center text-secondary pt-2 pb-5"
-          }`}
-        >
-          {result?.length === 0 || result === "Awards not found!"
-            ? "No awards or certificates yet"
-            : result?.map((award) => (
-                <img
-                  key={award.awardId + Math.random()}
-                  src={award.awardIconURL}
-                  className="awardicon"
-                  alt="award icon"
-                />
-              ))}
-        </div>
+        <AwardIcons result={result} />
       </div>
     </>
   );

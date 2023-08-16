@@ -1,5 +1,3 @@
-import React from "react";
-
 const SectionLoader = () => {
   return (
     <div className="d-flex justify-content-center py-5">

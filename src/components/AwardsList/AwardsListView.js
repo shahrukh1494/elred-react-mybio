@@ -1,40 +1,62 @@
 import "./AwardsList.scss";
-import VerifiedCheckIcon from "../../assets/images/blue tick icon.svg";
-import { useNavigate } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
+import userContext from "../UserContext";
+import SectionLoader from "../SectionLoader";
+import FetchError from "../FetchError";
+import AwardListItem from "./AwardListItem";
+import { fetchData } from "../Functions/FetchData";
 
-const AwardsListView = ({ data }) => {
-  const navigate = useNavigate();
+const AwardsListView = ({ data, count }) => {
+  const [start, setStart] = useState(data.length + 1);
+  const [listData, setListData] = useState(data);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const observerTarget = useRef(null);
+  const { userCode } = useContext(userContext);
+  const offset = 10;
+
+  useEffect(() => {
+    if (count > listData.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            fetchData(
+              setIsLoading,
+              userCode,
+              start,
+              offset,
+              setListData,
+              setStart,
+              setError
+            );
+          }
+        },
+        { threshold: 1 }
+      );
+
+      if (observerTarget.current) {
+        observer.observe(observerTarget.current);
+      }
+
+      return () => {
+        if (observerTarget.current) {
+          observer.unobserve(observerTarget.current); //eslint-disable-line
+        }
+      };
+    }
+  }, [observerTarget, count, listData]); //eslint-disable-line
 
   return (
     <div className="listcontainer">
-      {data?.map((listItem) => (
-        <div
-          onClick={() => navigate("/my-award-details", { state: listItem })}
+      {listData?.map((listItem) => (
+        <AwardListItem
           key={listItem.awardId + Math.random()}
-          className="listitem"
-        >
-          <img
-            className="awardicon"
-            src={listItem.awardIconURL}
-            alt="award icon"
-          />
-          <div className="d-flex flex-column">
-            <div className="listitemtitle">{listItem.awardTitle}</div>
-            <div className="d-flex">
-              <div className="issuedbytext">
-                Issued by : {listItem.issuedBy}
-              </div>
-              {listItem.issuedOrgVerifiedStatus && (
-                <img
-                  className="verifiedicon align-self-center"
-                  src={VerifiedCheckIcon}
-                  alt="verified"
-                />
-              )}
-            </div>
-          </div>
-        </div>
+          listItem={listItem}
+        />
       ))}
+      <div ref={observerTarget}></div>
+      {isLoading && <SectionLoader />}
+      {error && <FetchError />}
     </div>
   );
 };
