@@ -5,7 +5,7 @@ import ViewAward from "./pages/ViewAward";
 import ViewResume from "./pages/ViewResume";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const Pages = () => {
+const Routing = () => {
   return (
     <>
       <BrowserRouter>
@@ -21,4 +21,4 @@ const Pages = () => {
   );
 };
 
-export default Pages;
+export default Routing;

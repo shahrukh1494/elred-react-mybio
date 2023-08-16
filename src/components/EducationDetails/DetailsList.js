@@ -8,6 +8,14 @@ const DetailsList = ({ details, currentYear }) => {
           <DetailItem
             key={detail._id}
             detail={detail}
+            name={detail.areaOfStudy || detail.companyName}
+            verifiedStatus={
+              detail.alumniVerifiedStatus || detail.employeeVerifiedStatus
+            }
+            orgName={detail.institutionName || detail.companyName}
+            kycVerifiedStatus={
+              detail.institutionKYCVerifiedStatus || detail.orgKYCVerifiedStatus
+            }
             currentYear={currentYear}
           />
         ))

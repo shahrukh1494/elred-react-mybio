@@ -1,6 +1,6 @@
-import Pages from "./Pages";
+import Routing from "./Routing";
 import "./App.scss";
-import userContext from "./components/UserContext";
+import UserContext from "./components/UserContext";
 
 function App() {
   const userCode = "63aad78bb38aa1d755b49561";
@@ -10,9 +10,9 @@ function App() {
 
   return (
     <div>
-      <userContext.Provider value={{ userCode }}>
-        <Pages />
-      </userContext.Provider>
+      <UserContext.Provider value={{ userCode }}>
+        <Routing />
+      </UserContext.Provider>
     </div>
   );
 }

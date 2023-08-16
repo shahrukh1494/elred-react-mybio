@@ -63,6 +63,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 30ch;
+      margin-bottom: 2px;
     }
 
     .issuedbytext {
@@ -250,8 +251,8 @@
   .imgcertificate {
     display: flex;
     width: 335px;
-    height: 480px;
-    margin-top: 88px;
+    height: auto;
+    margin-top: 199px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;

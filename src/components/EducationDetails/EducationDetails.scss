@@ -15,13 +15,12 @@
 }
 
 .companyheader {
-  padding-top: 24px;
-  padding-left: 20px;
-  padding-bottom: 2px;
+  padding: 24px 0 24px 20px;
   font-family: Avenir Next LT Pro;
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
 .edcationdetailscontainer:last-child {

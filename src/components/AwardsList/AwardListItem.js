@@ -11,7 +11,7 @@ const AwardListItem = ({ listItem }) => {
       className="listitem"
     >
       <img className="awardicon" src={listItem.awardIconURL} alt="award icon" />
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column align-self-center">
         <div className="listitemtitle">{listItem.awardTitle}</div>
         <div className="d-flex">
           <div className="issuedbytext">Issued by : {listItem.issuedBy}</div>

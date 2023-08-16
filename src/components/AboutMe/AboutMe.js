@@ -2,14 +2,14 @@ import "./AboutMe.scss";
 import useDataFetch from "../../customHooks/useDataFetch";
 import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
-import userContext from "../UserContext";
+import UserContext from "../UserContext";
 import { useContext } from "react";
 import ResumeSection from "./ResumeSection";
 
 const API_ENDPOINT = "noSessionViewMyBio?userCode=";
 
 const AboutMe = () => {
-  const { userCode } = useContext(userContext);
+  const { userCode } = useContext(UserContext);
   const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });

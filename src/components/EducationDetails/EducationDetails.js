@@ -4,12 +4,12 @@ import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import DetailsList from "./DetailsList";
 import "./EducationDetails.scss";
-import userContext from "../UserContext";
+import UserContext from "../UserContext";
 
 const API_ENDPOINT = "noSessionViewMyBioEducationDetails?userCode=";
 
 const EducationDetails = () => {
-  const { userCode } = useContext(userContext);
+  const { userCode } = useContext(UserContext);
   const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
   });

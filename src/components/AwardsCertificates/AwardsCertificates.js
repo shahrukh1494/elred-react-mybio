@@ -4,13 +4,13 @@ import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import "./AwardsCertificates.scss";
 import { useNavigate } from "react-router-dom";
-import userContext from "../UserContext";
+import UserContext from "../UserContext";
 import AwardIcons from "./AwardIcons";
 
 const API_ENDPOINT = "noSessionPreviewAwards?userCode=";
 
 const AwardsCertificates = () => {
-  const { userCode } = useContext(userContext);
+  const { userCode } = useContext(UserContext);
   const navigate = useNavigate();
   const [data, loading, error] = useDataFetch(API_ENDPOINT + userCode, {
     method: "POST",
@@ -23,7 +23,7 @@ const AwardsCertificates = () => {
     result = result.slice(0, 10);
 
     navigate("/my-awards-and-certificates", {
-      state: { result, totalAwardsCount },
+      state: totalAwardsCount,
     });
   };
 

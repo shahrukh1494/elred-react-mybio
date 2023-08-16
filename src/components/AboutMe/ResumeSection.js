@@ -15,7 +15,7 @@ const ResumeSection = ({ data }) => {
       onClick={navigateToResume}
       className="resumebox d-flex justify-content-between"
     >
-      <div className="resumeheader">
+      <div className="resumeheadertext">
         <img src={ResumeIcon} alt="resume icon" className="resumeicon" />
         <span className="resumetext">Resume</span>
       </div>

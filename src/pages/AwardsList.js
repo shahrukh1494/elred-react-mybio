@@ -9,7 +9,7 @@ const AwardsList = () => {
   return (
     <>
       <AwardsHeader headerText="My Awards & certificates" />
-      <AwardsListView data={data.result} count={data.totalAwardsCount} />
+      <AwardsListView count={data} />
     </>
   );
 };
