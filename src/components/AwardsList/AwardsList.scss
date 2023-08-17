@@ -39,6 +39,7 @@
 
 .listcontainer {
   margin: 0 20px 0 20px;
+  height: 100vh;
 
   .awardicon {
     height: 44px;
@@ -152,6 +153,7 @@
   cursor: pointer;
 
   .awardiconthumbnail {
+    border-radius: 4px;
     width: 100%;
     height: 128px;
     object-position: top;
@@ -265,4 +267,5 @@
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  height: 100vh;
 }

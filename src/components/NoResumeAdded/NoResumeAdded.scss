@@ -15,7 +15,7 @@
 .resumeheader {
   display: flex;
   align-items: center;
-  margin: 10px 20px;
+  margin: 20px 20px 10px 20px;
 
   .backicon {
     width: 24px;
@@ -66,7 +66,7 @@
   .imgresume {
     display: flex;
     width: 335px;
-    height: 480px;
+    height: auto;
     margin-top: 88px;
     margin-left: auto;
     margin-right: auto;

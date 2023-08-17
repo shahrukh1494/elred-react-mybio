@@ -5,6 +5,7 @@ import SectionLoader from "../SectionLoader";
 import FetchError from "../FetchError";
 import AwardListItem from "../AwardListItem/AwardListItem";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchData } from "../Functions/FetchData";
 
 const AwardsListView = ({ count }) => {
   const [start, setStart] = useState(1);
@@ -14,32 +15,28 @@ const AwardsListView = ({ count }) => {
   const { userCode } = useContext(UserContext);
   const offset = 10;
 
-  function fetchData() {
-    fetch(
-      `noSessionPreviewAwards?userCode=${userCode}&start=${start}&offset=${offset}`,
-      {
-        method: "POST",
-      }
-    )
-      .then((response) => response.json())
-      .then((res) => {
-        setListData((prev) => [...prev, ...res.result]);
-        setStart((prev) => prev + res.result.length);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(true);
-        setIsLoading(false);
-      });
-  }
-
   useEffect(() => {
-    fetchData();
+    fetchData(
+      setIsLoading,
+      userCode,
+      start,
+      offset,
+      setListData,
+      setStart,
+      setError
+    );
   }, []); //eslint-disable-line
 
   const fetchMore = () => {
-    fetchData();
+    fetchData(
+      setIsLoading,
+      userCode,
+      start,
+      offset,
+      setListData,
+      setStart,
+      setError
+    );
   };
 
   return (

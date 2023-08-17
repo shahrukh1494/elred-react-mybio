@@ -11,7 +11,7 @@
   margin-bottom: 24px;
 
   .awardsheader {
-    padding: 0 16px 13px 3px;
+    padding: 0 20px 13px 0;
 
     .awardscertificatestxt {
       font-family: Avenir Next LT Pro;
@@ -40,8 +40,11 @@
     display: none;
   }
 
+  .awardiconscontainer:not(last-child) {
+    margin-right: 20px;
+  }
+
   .awardiconscontainer {
-    padding-left: 13px;
     padding-bottom: 12px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -57,7 +60,7 @@
     }
 
     .awardicon:last-child {
-      margin-right: 16px;
+      margin-right: 0;
     }
   }
 }
