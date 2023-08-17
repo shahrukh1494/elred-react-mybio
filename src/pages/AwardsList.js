@@ -1,5 +1,5 @@
-import AwardsHeader from "../components/AwardsList/AwardsHeader";
-import AwardsListView from "../components/AwardsList/AwardsListView";
+import AwardsHeader from "../components/AwardsHeader/AwardsHeader";
+import AwardsListView from "../components/AwardsList/AwardsList";
 import { useLocation } from "react-router-dom";
 
 const AwardsList = () => {

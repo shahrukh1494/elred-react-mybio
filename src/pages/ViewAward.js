@@ -1,5 +1,5 @@
-import AwardView from "../components/AwardsList/AwardView";
-import AwardsHeader from "../components/AwardsList/AwardsHeader";
+import AwardView from "../components/AwardView/AwardView";
+import AwardsHeader from "../components/AwardsHeader/AwardsHeader";
 
 const ViewAward = () => {
   return (

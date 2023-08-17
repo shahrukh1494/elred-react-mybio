@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aboutmecontainer {
+  padding: 0 20px 20px 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+
+  .aboutmeheader {
+    font-family: Avenir Next LT Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 12px;
+  }
+
+  .aboutmetext {
+    font-family: Avenir Next LT Pro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+  }
+
+  .bloodgroup {
+    margin-bottom: 24px;
+
+    .bloodgrouptext {
+      font-family: Avenir Next LT Pro;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    .bloodgrouptype {
+      font-family: Avenir Next LT Pro;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      color: rgba(28, 9, 9, 0.6);
+    }
+  }
+
+  .resumebox {
+    cursor: pointer;
+    border: 0.5px solid #e8e8e8;
+    box-shadow: 0px 4px 4px 0px #c0c0c040;
+
+    .resumeheadertext {
+      .resumeicon {
+        height: 46px;
+        width: 46px;
+        margin: 5px 14px;
+      }
+
+      .resumetext {
+        font-family: Avenir Next LT Pro;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+      }
+    }
+    .forwardicon {
+      height: 23px;
+      width: 24px;
+      margin-right: 14px;
+      align-self: center;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import "./Skills.scss";
+import "./SkillsContainer.scss";
 
 const SkillsContainer = ({
   skillsHeader = "",

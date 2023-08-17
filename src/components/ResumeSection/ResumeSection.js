@@ -1,4 +1,4 @@
-import "./AboutMe.scss";
+import "./ResumeSection.scss";
 import ForwardIcon from "../../assets/images/ic_forward.svg";
 import ResumeIcon from "../../assets/images/Group 13795.png";
 import { useNavigate } from "react-router-dom";

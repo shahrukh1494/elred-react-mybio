@@ -2,7 +2,7 @@ import { useContext } from "react";
 import useDataFetch from "../../customHooks/useDataFetch";
 import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
-import DetailsList from "./DetailsList";
+import DetailsList from "../DetailsList/DetailsList";
 import "./EducationDetails.scss";
 import UserContext from "../UserContext";
 

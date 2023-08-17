@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import "./AwardsList.scss";
+import "./Certificate.scss";
 import PdfIcon from "../../assets/images/pdficon.svg";
 import ImageIcon from "../../assets/images/image icon.svg";
 import CrossIcon from "../../assets/images/xmark.svg";

@@ -1,6 +1,8 @@
-import "./AwardsCertificates.scss";
+import "./AwardIcons.scss";
+import { useNavigate } from "react-router-dom";
 
 const AwardIcons = ({ result }) => {
+  const navigate = useNavigate();
   return (
     <div
       className={`${
@@ -16,6 +18,7 @@ const AwardIcons = ({ result }) => {
       ) : (
         result?.map((award) => (
           <img
+            onClick={() => navigate("/my-award-details", { state: award })}
             key={award.awardId + Math.random()}
             src={award.awardIconURL}
             className="awardicon"

@@ -1,4 +1,4 @@
-import "./Resume.scss";
+import "./NoResumeAdded.scss";
 import BackIcon from "../../assets/images/ic_back.svg";
 import NoResumeImg from "../../assets/images/no resume.png";
 import { useNavigate } from "react-router-dom";

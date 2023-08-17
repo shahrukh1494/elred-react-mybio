@@ -1,8 +1,8 @@
-import "./AwardsList.scss";
+import "./AwardView.scss";
 import { useLocation } from "react-router-dom";
 import CheckIcon from "../../assets/images/blue tick icon.svg";
 import { convertDateFormat } from "../Functions/DateFormat";
-import AwardPreviewCard from "./AwardPreviewCard";
+import AwardPreviewCard from "../AwardPreviewCard/AwardPreviewCard";
 
 const AwardView = () => {
   const location = useLocation();

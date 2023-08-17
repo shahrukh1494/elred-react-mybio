@@ -5,7 +5,7 @@ import SectionLoader from "../SectionLoader";
 import "./AwardsCertificates.scss";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../UserContext";
-import AwardIcons from "./AwardIcons";
+import AwardIcons from "../AwardIcons/AwardIcons";
 
 const API_ENDPOINT = "noSessionPreviewAwards?userCode=";
 

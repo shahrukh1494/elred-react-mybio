@@ -1,4 +1,4 @@
-import Certificate from "./components/AwardsList/Certificate";
+import Certificate from "./components/Certificate/Certificate";
 import AwardsList from "./pages/AwardsList";
 import MyBio from "./pages/MyBio";
 import ViewAward from "./pages/ViewAward";

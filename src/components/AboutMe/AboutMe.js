@@ -4,7 +4,7 @@ import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import UserContext from "../UserContext";
 import { useContext } from "react";
-import ResumeSection from "./ResumeSection";
+import ResumeSection from "../ResumeSection/ResumeSection";
 
 const API_ENDPOINT = "noSessionViewMyBio?userCode=";
 

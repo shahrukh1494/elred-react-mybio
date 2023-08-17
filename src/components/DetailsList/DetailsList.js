@@ -1,4 +1,5 @@
-import DetailItem from "./DetailItem";
+import DetailItem from "../DetailItem/DetailItem";
+import "./DetailsList.scss";
 
 const DetailsList = ({ details, currentYear }) => {
   return (

@@ -1,6 +1,6 @@
 import ShiledIcon from "../../assets/images/shield icon.svg";
 import BlueTickIcon from "../../assets/images/blue tick icon.svg";
-import "./EducationDetails.scss";
+import "./DetailItem.scss";
 
 const DetailItem = ({
   detail,

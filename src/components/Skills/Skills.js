@@ -1,7 +1,7 @@
 import FetchError from "../FetchError";
 import SectionLoader from "../SectionLoader";
 import useDataFetch from "../../customHooks/useDataFetch";
-import SkillsContainer from "./SkillsContainer";
+import SkillsContainer from "../SkillsContainer/SkillsContainer";
 import { useContext } from "react";
 import UserContext from "../UserContext";
 

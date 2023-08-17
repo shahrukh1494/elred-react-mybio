@@ -17,7 +17,7 @@ export function fetchData(
     .then((response) => response.json())
     .then((res) => {
       setListData((prev) => [...prev, ...res.result]);
-      setStart((prev) => prev + res.length);
+      setStart((prev) => prev + res.result.length);
       setIsLoading(false);
     })
     .catch((error) => {

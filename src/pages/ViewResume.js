@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
-import MyResume from "../components/Resume/MyResume";
-import NoResumeAdded from "../components/Resume/NoResumeAdded";
+import MyResume from "../components/MyResume/MyResume";
+import NoResumeAdded from "../components/NoResumeAdded/NoResumeAdded";
 
 const ViewResume = () => {
   const location = useLocation();

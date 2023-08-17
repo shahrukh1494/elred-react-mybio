@@ -1,4 +1,4 @@
-import "./AwardsList.scss";
+import "./AwardPreviewCard.scss";
 import PdfIcon from "../../assets/images/pdficon.svg";
 import ImageIcon from "../../assets/images/image icon.svg";
 import { useNavigate } from "react-router-dom";

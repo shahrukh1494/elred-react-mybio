@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import VerifiedCheckIcon from "../../assets/images/blue tick icon.svg";
-import "./AwardsList.scss";
+import "./AwardListItem.scss";
 
 const AwardListItem = ({ listItem }) => {
   const navigate = useNavigate();

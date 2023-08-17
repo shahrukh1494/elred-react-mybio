@@ -12,33 +12,42 @@
   font-style: normal;
 }
 
-.backicon {
-  width: 24px;
-  height: 24px;
-  margin-right: 14px;
+.awardsheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+  .backicon {
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+
+  .awardsheadertext {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  .searchicon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.listitem:last-child {
+  border-bottom: none;
+}
+
+.listitem {
+  display: flex;
+  padding: 18px 0;
   cursor: pointer;
-}
-
-.awardsheadertext {
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-}
-
-.searchicon {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.borderbottom {
-  margin-bottom: 40px;
-  border-bottom: 1px solid #dfdfdf;
-}
-
-.listcontainer {
-  margin: 0 20px 0 20px;
+  border-bottom: 0.5px solid #00000029;
 
   .awardicon {
     height: 44px;
@@ -255,14 +264,4 @@
   .pdfcertificate::-webkit-scrollbar {
     width: 0;
   }
-}
-
-.infinitescroll::-webkit-scrollbar {
-  width: 0;
-}
-
-.infinitescroll {
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
