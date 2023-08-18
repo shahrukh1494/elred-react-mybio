@@ -17,7 +17,6 @@ const DetailsList = ({ details, currentYear }) => {
             kycVerifiedStatus={
               detail.institutionKYCVerifiedStatus || detail.orgKYCVerifiedStatus
             }
-            currentYear={currentYear}
           />
         ))
       ) : (

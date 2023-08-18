@@ -192,7 +192,10 @@
 
 .certificateheader {
   align-items: center;
-  margin: 20px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 
   .backicon {
     width: 24px;
@@ -241,7 +244,7 @@
 .certificate {
   .imgcertificate {
     display: flex;
-    width: 335px;
+    max-width: 90%;
     height: auto;
     margin-top: 189px;
     margin-left: auto;

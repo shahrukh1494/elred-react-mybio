@@ -8,7 +8,6 @@ const DetailItem = ({
   verifiedStatus,
   orgName,
   kycVerifiedStatus,
-  currentYear,
 }) => {
   return (
     <div className="edcationdetailscontainer">
@@ -31,7 +30,9 @@ const DetailItem = ({
       </div>
       <div className="year">
         {detail.startYear}-
-        {detail.endYear === currentYear ? "Present" : detail.endYear}
+        {detail.currentlyStudying || detail.currentlyWorking
+          ? "Present"
+          : detail.endYear}
       </div>
     </div>
   );

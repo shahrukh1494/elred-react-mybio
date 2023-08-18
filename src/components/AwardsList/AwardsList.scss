@@ -239,7 +239,7 @@
 .certificate {
   .imgcertificate {
     display: flex;
-    width: 335px;
+    max-width: 90%;
     height: auto;
     margin-top: 199px;
     margin-left: auto;
@@ -268,4 +268,10 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   height: 100vh;
+}
+
+@media only screen and (max-width: 300px) {
+  .listcontainer {
+    max-width: 100%;
+  }
 }

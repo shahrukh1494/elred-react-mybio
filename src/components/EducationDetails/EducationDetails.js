@@ -18,19 +18,16 @@ const EducationDetails = () => {
 
   const { educationDetails, companyDetails } = data.result[0];
 
-  const date = new Date();
-  const currentYear = date.getFullYear().toString();
-
   return (
     <>
       <div className="educationheader">Education details</div>
       <div className="educationboxcontainer">
-        <DetailsList details={educationDetails} currentYear={currentYear} />
+        <DetailsList details={educationDetails} />
       </div>
 
       <div className="companyheader">Company details</div>
       <div className="companyboxcontainer">
-        <DetailsList details={companyDetails} currentYear={currentYear} />
+        <DetailsList details={companyDetails} />
       </div>
     </>
   );
